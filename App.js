@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import CounterApp from './screens/CounterApp';
+import TodoApp from './screens/TodoApp';
+import store from './redux/store';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <Provider store={store}>
+      <TodoApp />
+    </Provider>
   );
 }
 
